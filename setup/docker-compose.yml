@@ -1,0 +1,36 @@
+# n8n for the Norlabs n8n projects. Runs on your own laptop only.
+#
+#   cp .env.example .env       (then fill in .env)
+#   docker compose up -d       (start)
+#   docker compose down        (stop; your workflows are kept)
+#
+# The n8n version is pinned. Change it only when CONVENTIONS.md says so.
+
+services:
+  n8n:
+    image: n8nio/n8n:2.43.7
+    container_name: norlabs-n8n
+    restart: unless-stopped
+    ports:
+      # 127.0.0.1 means only your own laptop can open n8n,
+      # not other devices on the same Wi-Fi.
+      - "127.0.0.1:5678:5678"
+    env_file:
+      - .env
+    environment:
+      - GENERIC_TIMEZONE=Asia/Kolkata
+      - TZ=Asia/Kolkata
+      # Lets workflows read bot tokens from .env as {{ $env.P4_BOT_TOKEN }} etc.
+      # Safe here because this n8n is yours alone. Never set this on a shared server.
+      - N8N_BLOCK_ENV_ACCESS_IN_NODE=false
+      # Keep the execution log from growing forever: delete runs older than 7 days.
+      - EXECUTIONS_DATA_PRUNE=true
+      - EXECUTIONS_DATA_MAX_AGE=168
+    volumes:
+      # Your workflows, credentials and settings live in this Docker volume.
+      - n8n_data:/home/node/.n8n
+      # Files your workflows read or write (the "files" folder next to this file).
+      - ./files:/home/node/.n8n-files
+
+volumes:
+  n8n_data:

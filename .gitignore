@@ -1,0 +1,11 @@
+# Secrets: never commit
+.env
+setup/.env
+
+# Your own working files
+setup/files/*
+!setup/files/README.txt
+
+# OS / editor
+.DS_Store
+Thumbs.db
