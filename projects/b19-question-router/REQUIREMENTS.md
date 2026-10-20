@@ -18,7 +18,7 @@ The cohort's Telegram group is where students ask for help. The same setup quest
 
 This project puts a bot in the group. It reads each message, decides whether it's a question and what kind, answers common setup and concept questions with the instructor's own curated answers, and passes everything else to the instructor privately, with a summary and a link. The bot never writes its own answers, and it never answers graded homework or capstone implementation questions.
 
-It uses the same receiving pattern as [P4 · Interview-prep quiz bot](<../p4-quiz-bot/REQUIREMENTS.md>) (its own bot, `getUpdates` polling) and the same "answer only from a curated list" rule as [b13 · FAQ support bot](<../b13-faq-support-bot/REQUIREMENTS.md>), which applies it to a small business's customers.
+It uses the same receiving pattern as [b05 · Evening check-in](<../b05-evening-check-in/REQUIREMENTS.md>) (its own bot, `getUpdates` polling) and the same "answer only from a curated list" rule as [b13 · FAQ support bot](<../b13-faq-support-bot/REQUIREMENTS.md>), which applies it to a small business's customers.
 
 ## 2. Who it's for & how they use it
 

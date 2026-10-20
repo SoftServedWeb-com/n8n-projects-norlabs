@@ -334,4 +334,4 @@ Alerts: 2 · logged: 3 · needs review: 1 · waiting for the next run: 0
 As built here, this project is **not** a capstone, because it's a provided project. It can seed your Capstone 1 if your spec adds something genuinely new, for example:
 - a new source: a fourth ATS with a documented public jobs API, after you've checked its terms;
 - a new action: strong matches go to an approval step that drafts a tailored cover note or CV bullet list for you to edit;
-- a new trigger: a Telegram command such as `/track <company>` that checks a board live and adds the company to your list (this needs its own bot and the polling pattern from P4).
+- a new trigger: a Telegram command such as `/track <company>` that checks a board live and adds the company to your list (this needs its own bot and the polling pattern from [b05](<../b05-evening-check-in/REQUIREMENTS.md>)).

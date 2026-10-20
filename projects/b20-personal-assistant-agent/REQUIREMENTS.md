@@ -96,7 +96,7 @@ The column names below are the ones in those projects' requirements documents. I
 |---|---|---|---|
 | `search_jobs` | `query` string: keywords matched against title and company, case-insensitive, every word must appear; `""` matches any · `min_score` number, whole, 1–10, default 7 · `company` string, optional · `since_days` number, 1–30, default 7 | P2 `jobs`: `id`, `company`, `title`, `location`, `url`, `score`, `status`, `scored_at`, `my_action`. Rows with status `new` or `needs_review` have no valid score and are skipped | Up to 10 jobs, newest `scored_at` first, with `total_matches` |
 | `get_applications` | `status` string, one of `applied`, `interview`, `rejected`, `offer`, `ghosted`, `any` (default `any`) · `needs_follow_up` boolean, default false · `company` string, optional | b01 `applications`: `app_id`, `company`, `role`, `applied_on`, `source`, `status`, `status_updated_at`, `last_email_at` | Up to 15 applications. `needs_follow_up` keeps rows with status `applied` or `interview` and no company email for 7 days or more (b01's `nudge_days`), counted from `last_email_at` or else `applied_on` |
-| `get_quiz_stats` | `days` number, 1–60, default 7 | P4 `attempts` (`attempted_at`, `topic`, `score`, `status`) and `questions` (`next_due`) | Graded answers in the window, average score (0–5), the 3 weakest topics with averages, questions due today, bank size: the same numbers as P4's `/stats` |
+| `get_quiz_stats` | `days` number, 1–60, default 7 | P4 `attempts` (`attempted_at`, `topic`, `score`, `status`) and `questions` (`next_due`) | Graded answers in the window, average score (0–5), the 3 weakest topics with averages, questions due today, bank size: the same numbers as P4's `stats` reply |
 | `get_calendar` | `date` string, `YYYY-MM-DD`, from today to 6 days ahead, default today (IST) | Google Calendar, primary calendar, read-only | That day's events: `start`, `end`, `title`, `location`. No descriptions, no attendees |
 | `add_task` (v3) | `title` string, 3–120 characters · `due_date` string, `YYYY-MM-DD`, optional | Writes `b20_pending`. After `/confirm`, the confirm branch appends to `tasks` | `{ "ok": true, "status": "needs_confirmation", "code": "4821", "summary": "…" }` |
 
@@ -172,7 +172,7 @@ Most of this is set up once in [SETUP.md](<../../SETUP.md>). This project adds a
 
 | Credential | Scope needed |
 |---|---|
-| Telegram bot token, **a new bot just for this project** | Create it with @BotFather. Don't reuse P4's bot or any other bot that polls or has a webhook (§14). Sending uses the Telegram credential. Polling uses the same token as `B20_BOT_TOKEN` in the gitignored `.env` that the setup lab's docker-compose loads; the HTTP Request node reads it as `$env.B20_BOT_TOKEN`. Never type the token into the URL and never store it in a Data Table |
+| Telegram bot token, **a new bot just for this project** | Create it with @BotFather. Don't reuse any other bot that polls or has a webhook (§14). Sending uses the Telegram credential. Polling uses the same token as `B20_BOT_TOKEN` in the gitignored `.env` that the setup lab's docker-compose loads; the HTTP Request node reads it as `$env.B20_BOT_TOKEN`. Never type the token into the URL and never store it in a Data Table |
 | Your Telegram chat ID | Stored in `b20_settings` |
 | OpenAI API key | Model calls |
 | Google OAuth (Sheets) | Read P2's, b01's and P4's Sheets; append to `tasks` and `turn_log` |

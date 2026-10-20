@@ -119,7 +119,7 @@ Your own n8n needs your own Google "OAuth app". You set it up once, and every Go
 
 1. Go to [console.cloud.google.com](https://console.cloud.google.com/) and create a project, for example `n8n-norlabs`.
 2. **APIs & Services → Library.** Enable the APIs your projects use: **Google Sheets API**, **Gmail API**, **Google Drive API**, **Google Calendar API**, **Google Docs API**.
-3. **APIs & Services → OAuth consent screen.** Choose **External**. Fill in the app name and your email. Under **Test users**, add your own Gmail address.
+3. **APIs & Services → OAuth consent screen.** Choose **External**. Fill in the app name and your email. Under **Test users**, add your own Gmail address. (P4 later adds its quiz mailbox here too.)
 4. In n8n: **Add credential**, choose for example **Google Sheets OAuth2 API**. Copy the **OAuth Redirect URL** it shows. It looks like `http://localhost:5678/rest/oauth2-credential/callback`.
 5. Back in Google Cloud: **APIs & Services → Credentials → Create credentials → OAuth client ID** → **Web application**. Under **Authorized redirect URIs**, paste the URL from step 4. Create it, then copy the **Client ID** and **Client secret**.
 6. In n8n, paste the Client ID and Client secret, click **Sign in with Google**, choose your account, and allow access. Google warns that the app isn't verified: click **Continue**. It's your own app.
@@ -145,10 +145,10 @@ Projects marked 📨 in the [project list](<README.md#all-projects>) read your T
 2. **Its token in `.env`**, under the name the project uses, for example:
 
    ```
-   P4_BOT_TOKEN=123456789:AA...
+   B05_BOT_TOKEN=123456789:AA...
    ```
 
-   The project's workflow reads it as `{{ $env.P4_BOT_TOKEN }}`, so the token is never typed into a workflow and never ends up in an export. Also save the same token as a Telegram credential in n8n, for sending replies.
+   The project's workflow reads it as `{{ $env.B05_BOT_TOKEN }}`, so the token is never typed into a workflow and never ends up in an export. Also save the same token as a Telegram credential in n8n, for sending replies.
 
 After any change to `.env`, restart n8n so it picks the change up:
 

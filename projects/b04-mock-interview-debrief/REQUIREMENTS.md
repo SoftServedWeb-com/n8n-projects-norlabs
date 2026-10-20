@@ -150,7 +150,7 @@ All set up once in [SETUP.md](<../../SETUP.md>):
 
 | Credential | Scope needed |
 |---|---|
-| A **new** Telegram bot for this project (from @BotFather) + your chat ID | Polling with `getUpdates`, downloading voice notes, replying. Don't reuse P4's bot or any other receiving bot: `getUpdates` consumes messages, so two projects can't share one bot. The token goes in two places: a Telegram credential (downloads and replies) and `B04_BOT_TOKEN` in the setup lab's gitignored `.env` (for `getUpdates`) |
+| A **new** Telegram bot for this project (from @BotFather) + your chat ID | Polling with `getUpdates`, downloading voice notes, replying. Don't reuse any other project's receiving bot: `getUpdates` consumes messages, so two projects can't share one bot. The token goes in two places: a Telegram credential (downloads and replies) and `B04_BOT_TOKEN` in the setup lab's gitignored `.env` (for `getUpdates`) |
 | OpenAI API key, as an n8n OpenAI credential | Transcription (HTTP Request, predefined credential) and feedback |
 | Google OAuth (Sheets) | Read questions and settings, write history |
 
@@ -257,7 +257,7 @@ Error Trigger → Telegram alert
 | Risk | What to do |
 |---|---|
 | Telegram keeps undelivered messages for at most 24 hours | If the laptop was off longer, record the answer again |
-| `getUpdates` and webhooks can't run on the same bot, and `getUpdates` consumes messages | One bot per receiving project. Never share this bot with P4, b02 or a Telegram Trigger |
+| `getUpdates` and webhooks can't run on the same bot, and `getUpdates` consumes messages | One bot per receiving project. Never share this bot with b02, another receiving project or a Telegram Trigger |
 | The Bot API puts the token in the URL path, and the HTTP Request node can't use n8n's Telegram credential for that | That's why the `getUpdates` URL reads `$env.B04_BOT_TOKEN` (FR-3). If the URL comes out as `.../bot/getUpdates`, the variable is missing: check `.env` and restart n8n (§8) |
 | In n8n 2.43.7 the OpenAI node's *Audio → Transcribe* operation is hard-coded to `whisper-1`: you can't choose the model or pass a prompt. On 2026-08-26 OpenAI announced that `whisper-1` will be removed from the API on 26 February 2027 | That's why FR-10 uses an HTTP Request with the model from [CONVENTIONS.md](<../../CONVENTIONS.md>). Don't swap in the OpenAI node because it looks simpler: it would stop working on that date |
 | Voice notes are OGG/Opus audio, and the file Telegram hands you usually ends in `.oga`. OpenAI's API reference lists `ogg` (not `oga`), recommends a filename with an extension, and says supported formats depend on the model; its speech-to-text guide gives a shorter list that leaves out `ogg` | **Verify before building:** send one real voice note through your transcription model in v2. If `answer.ogg` (FR-9) is rejected, record the answer with your phone's recorder and send it as an `.m4a` audio file instead (FR-6 accepts audio files) |

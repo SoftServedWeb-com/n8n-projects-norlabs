@@ -241,7 +241,7 @@ Separate workflow: Error Trigger → Telegram alert
 ## 12. Stretch goals
 
 1. **Long lectures in parts:** split long recordings outside n8n (the n8n Docker image has no audio tools), name them `-part1`, `-part2`, and have the workflow merge the parts of one lecture into a single notes Doc.
-2. **Review in Telegram:** add a `/review` command to P4's bot that shows each `pending_review` question with approve and reject options.
+2. **Review by email:** add a `review` reply command to P4 that emails each `pending_review` question and lets you reply `ok` or `reject` (P4's stretch 5).
 3. **Weekly revision sheet:** on Sunday, combine the week's key concepts and action items into one Doc.
 4. **Glossary:** append each key concept to a `glossary` sheet, de-duplicated by term.
 

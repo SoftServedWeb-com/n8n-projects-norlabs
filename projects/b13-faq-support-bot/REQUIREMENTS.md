@@ -212,7 +212,7 @@ Workflow C · Error Trigger → Telegram alert to owner
 | Validation and cost maths | Code |
 | Alerts | Error Trigger |
 
-The polling pattern is the same one [P4 · Interview-prep quiz bot](<../p4-quiz-bot/REQUIREMENTS.md>) uses. The difference is that P4 answers only you, while this bot answers anyone.
+The polling pattern is the same one [b05 · Evening check-in](<../b05-evening-check-in/REQUIREMENTS.md>) uses. The difference is that b05 answers only you, while this bot answers anyone.
 
 ## 10. Milestones
 

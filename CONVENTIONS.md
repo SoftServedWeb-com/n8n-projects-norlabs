@@ -47,7 +47,7 @@ At about ₹95 to the US dollar (rate on 2026-10-16), a typical project costs a 
 | Rate limits | About 1 message a second per chat, about 20 a minute in a group |
 | `getUpdates` and webhooks | Can't be used together on one bot. Every project that **receives** messages gets its own bot |
 
-**Bot token naming.** Projects that receive messages read their token from `.env` as `<PROJECT>_BOT_TOKEN`, for example `P4_BOT_TOKEN` and `B02_BOT_TOKEN`. The full list is in [`setup/.env.example`](<setup/.env.example>). Sending messages uses n8n's Telegram credential as usual.
+**Bot token naming.** Projects that receive messages read their token from `.env` as `<PROJECT>_BOT_TOKEN`, for example `B02_BOT_TOKEN` and `B05_BOT_TOKEN`. The full list is in [`setup/.env.example`](<setup/.env.example>). Sending messages uses n8n's Telegram credential as usual.
 
 ## Other services
 

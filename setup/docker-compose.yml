@@ -20,7 +20,7 @@ services:
     environment:
       - GENERIC_TIMEZONE=Asia/Kolkata
       - TZ=Asia/Kolkata
-      # Lets workflows read bot tokens from .env as {{ $env.P4_BOT_TOKEN }} etc.
+      # Lets workflows read bot tokens from .env as {{ $env.B05_BOT_TOKEN }} etc.
       # Safe here because this n8n is yours alone. Never set this on a shared server.
       - N8N_BLOCK_ENV_ACCESS_IN_NODE=false
       # Keep the execution log from growing forever: delete runs older than 7 days.

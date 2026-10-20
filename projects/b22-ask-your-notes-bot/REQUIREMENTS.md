@@ -196,7 +196,7 @@ Chunk text lives only in Qdrant. Don't copy it into a Data Table: Data Tables sh
 
 | Credential | Scope needed |
 |---|---|
-| Telegram bot token, **a new bot just for this project** | Create it with @BotFather. Don't reuse P4's, b20's or any other polling bot (§14). Sending uses the Telegram credential. Polling uses the same token as `B22_BOT_TOKEN` in the gitignored `.env` that the setup lab's docker-compose loads; the HTTP Request node reads it as `$env.B22_BOT_TOKEN`. Never type the token into the URL and never store it in a Data Table |
+| Telegram bot token, **a new bot just for this project** | Create it with @BotFather. Don't reuse b20's or any other polling bot (§14). Sending uses the Telegram credential. Polling uses the same token as `B22_BOT_TOKEN` in the gitignored `.env` that the setup lab's docker-compose loads; the HTTP Request node reads it as `$env.B22_BOT_TOKEN`. Never type the token into the URL and never store it in a Data Table |
 | Your Telegram chat ID | Stored in `b22_settings` |
 | OpenAI API key | Embeddings and the answer model |
 | Qdrant API (n8n credential) | Qdrant URL `http://qdrant:6333`. Leave API Key empty unless you set one on Qdrant |

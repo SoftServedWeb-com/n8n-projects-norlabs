@@ -352,4 +352,4 @@ A review batch:
 As built here, this project is **not** a capstone, because it's a provided project. It can seed your Capstone 1 if your spec adds something genuinely new, for example:
 - a new source: your college placement cell's mailing list under its own label, with application deadlines pulled into a Sheet you approve;
 - a new action: interview emails get two free slots from your Google Calendar suggested in the draft (stretch 4), with a test showing it never double-books;
-- a new trigger: a Telegram command such as `/redraft <subject> <instruction>` that rewrites a draft your way (this needs its own bot and the polling pattern from P4).
+- a new trigger: a Telegram command such as `/redraft <subject> <instruction>` that rewrites a draft your way (this needs its own bot and the polling pattern from [b05](<../b05-evening-check-in/REQUIREMENTS.md>)).

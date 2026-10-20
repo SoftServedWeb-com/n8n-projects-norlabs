@@ -249,7 +249,7 @@ Error Trigger → Telegram alert
 | Risk | What to do |
 |---|---|
 | Telegram keeps undelivered messages for at most 24 hours | If the laptop was off longer, resend. The bot can't recover older messages |
-| `getUpdates` and webhooks can't run on the same bot, and `getUpdates` consumes messages | One bot per receiving project. Never reuse this bot for P4, b04 or a Telegram Trigger |
+| `getUpdates` and webhooks can't run on the same bot, and `getUpdates` consumes messages | One bot per receiving project. Never reuse this bot for b04, another receiving project or a Telegram Trigger |
 | The Bot API puts the token in the URL path, and the HTTP Request node can't use n8n's Telegram credential for that | That's why the `getUpdates` URL reads `$env.B02_BOT_TOKEN` (FR-1). If the URL comes out as `.../bot/getUpdates`, the variable is missing: check `.env` and restart n8n (§8) |
 | Many job pages build their content with JavaScript (an Ashby job page returns about 100 characters of visible text to a plain request) | That's what FR-7 is for. Paste the description, or build stretch 1 |
 | Bot messages are limited to 4,096 characters | FR-15 splits replies at 4,000 |

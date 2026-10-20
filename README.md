@@ -39,6 +39,8 @@ Each project has one `REQUIREMENTS.md`. It tells you **what** to build and how y
 
 **Reference solutions:** P1–P4 will get a reference workflow later, in their `reference/` folder. Bank projects are requirements only.
 
+**Build guide:** P4 also has a step-by-step [BUILD-GUIDE.md](<projects/p4-quiz-bot/BUILD-GUIDE.md>) that configures every node. Try the design yourself before you open it.
+
 ---
 
 ## Repository layout
@@ -73,7 +75,7 @@ projects/
 | P1 | [Build-log → LinkedIn with approval](<projects/p1-build-log/REQUIREMENTS.md>) | Build in public | ★★☆ | 6–8 h | W2 D3 | ✅ |
 | P2 | [Job-hunt radar](<projects/p2-job-radar/REQUIREMENTS.md>) | Career | ★★☆ | 6–8 h | W2 D2 / D3 | ✅ |
 | P3 | [Recruiter inbox triage](<projects/p3-inbox-triage/REQUIREMENTS.md>) | Career | ★★☆ | 5–7 h | W2 D3 | ✅ |
-| P4 | [Interview-prep quiz bot](<projects/p4-quiz-bot/REQUIREMENTS.md>) | Career | ★★★ | 8–10 h | W2 D3 | 📨 |
+| P4 | [Interview-prep quiz bot](<projects/p4-quiz-bot/REQUIREMENTS.md>) | Career | ★★★ | 8–10 h | W2 D3 | ✅ |
 
 ### Project bank
 

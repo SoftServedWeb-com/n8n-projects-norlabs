@@ -143,7 +143,7 @@ All set up once in [SETUP.md](<../../SETUP.md>):
 
 | Credential | Scope needed |
 |---|---|
-| A **new** Telegram bot from @BotFather, made only for this project | Its token goes in an n8n Telegram credential (for sending replies) and in your `.env` file as `B09_BOT_TOKEN` (for `getUpdates`, see below). Don't reuse P1's or P4's bot (§14) |
+| A **new** Telegram bot from @BotFather, made only for this project | Its token goes in an n8n Telegram credential (for sending replies) and in your `.env` file as `B09_BOT_TOKEN` (for `getUpdates`, see below). Don't reuse P1's bot or any other project's bot (§14) |
 | Your Telegram chat ID | The allowlist, stored in `b09_state` |
 | OpenAI API key | Model calls |
 | Google OAuth (Sheets) | Read/write your project Sheet |
