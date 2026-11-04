@@ -60,14 +60,14 @@ These apply to every milestone. Breaking one means the milestone isn't done, how
 
 1. Create a new **empty** GitHub repo called `career-copilot`, and clone it.
 2. Copy everything from [`starter/`](<starter/>) into it, including the hidden `.gitignore`.
-3. Copy [`../projects/p3-inbox-triage/samples/emails.json`](<../projects/p3-inbox-triage/samples/emails.json>) to `data/emails.json`. You'll need it in Milestone 2.
+3. Check that `data/` has `notes.json` and `emails.json` (the 10 fake sample emails from the n8n project P3). You'll need the emails in Milestone 2.
 4. Copy `.env.example` to `.env` and add your model key (OpenAI, or Gemini if your poster uses it).
 5. Bring in your Month 1 LinkedIn poster code under `src/`, or keep it in its own repo and copy in only the drafting part. Milestone 1 upgrades it.
 6. Run `git status`. If `.env` is listed, **stop** and fix `.gitignore` before committing anything.
 7. Run `pnpm install` (or `npm install`), then make your first commit.
 8. Open [Milestone 1](<milestone-1-post-drafter.md>).
 
-You need Node 22 or newer. The model names and prices are in [CONVENTIONS.md](<../CONVENTIONS.md>).
+You need Node 22 or newer. The model names and prices are in the n8n projects' [CONVENTIONS.md](https://github.com/SoftServedWeb-com/n8n-projects-norlabs/blob/main/CONVENTIONS.md).
 
 ## Folder layout you'll end up with
 

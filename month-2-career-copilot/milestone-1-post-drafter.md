@@ -38,7 +38,7 @@ Then write a short README for P3 and a #BuildWithNor post about it.
 
 ## Part 1 · The lab (one evening)
 
-Do the **`w2-structured-output`** lab (Evening Bootcamp, Week 2) exactly as its README says, including **"Try the failure path on purpose"**.
+Do the [**`w2-structured-output`** lab](https://github.com/SoftServedWeb-com/norlabsai-AI-bootcamp-student/blob/main/Bootcamp%201%20-%20Foundations/labs/w2-structured-output/README.md) (Evening Bootcamp, Week 2) exactly as its README says, including **"Try the failure path on purpose"**.
 
 Before moving on, you should be able to say:
 

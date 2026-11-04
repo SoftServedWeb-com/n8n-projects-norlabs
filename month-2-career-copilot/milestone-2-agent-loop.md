@@ -37,7 +37,7 @@ Then change your Milestone 1 drafter to use it, and check that `pnpm score-posts
 | ID | Requirement |
 |---|---|
 | C1 | A Zod schema: `category` is one of `recruiter`, `interview`, `course`, `newsletter`, `other`; `confidence` is a number from 0 to 1; `summary` is a string of at most 200 characters. The answer has **no** `id` or `message_id` field: your code already knows which email it's classifying. |
-| C2 | The prompt follows the six prompt rules in [P3's requirements, §6 Step 1](<../projects/p3-inbox-triage/REQUIREMENTS.md>). The email goes inside `<email>…</email>` tags, marked as data, not instructions. The body is cut to 2,000 characters. |
+| C2 | The prompt follows the six prompt rules in [P3's requirements, §6 Step 1](https://github.com/SoftServedWeb-com/n8n-projects-norlabs/blob/main/projects/p3-inbox-triage/REQUIREMENTS.md). The email goes inside `<email>…</email>` tags, marked as data, not instructions. The body is cut to 2,000 characters. |
 | C3 | It uses `generateChecked()`. If both attempts fail, the result is `null`, and the email goes to review with the reason `couldn't classify`. |
 | C4 | Your code decides the label, in a function `routeLabel(result)`: `recruiter` or `interview` with confidence ≥ 0.7 → `AI/Recruiter`; `course` or `newsletter` with confidence ≥ 0.7 → that label; anything else, including `null` → `AI/Review`. |
 | C5 | `pnpm score-emails` runs the 10 samples in `data/emails.json` and prints `id`, `expected`, `predicted`, `confidence`, `label`, `✓/✗`, then the accuracy. |

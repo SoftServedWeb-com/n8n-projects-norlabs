@@ -9,6 +9,7 @@ Copy everything in this folder into your own `career-copilot` repo, **including 
 | `package.json` | Scripts for every milestone, and the packages for Milestone 1 (OpenAI and Zod; if your poster uses Gemini, also run `pnpm add @google/genai`). Later milestones tell you what to add |
 | `tsconfig.json` | Strict TypeScript, Node-style modules, builds `src/` into `dist/` |
 | `data/notes.json` | 10 fixed "what I learned" notes for scoring your post drafter (Milestone 1). Don't edit them, so your scores stay comparable |
+| `data/emails.json` | The 10 fake sample emails from the n8n project P3, for the classifier and the agent (Milestone 2) |
 | `data/posts.example.json` | The format for `data/posts.json` (Milestone 2). Replace the examples with your own public posts |
 
 **Imports end in `.js`.** With these settings, a file importing `src/post/build.ts` from the same folder writes `import { buildPost } from "./build.js";`. That looks odd, but it's how TypeScript and Node agree on file names: `tsx` finds the `.ts` file while you develop, and the built `dist/` files point at the `.js` files.
