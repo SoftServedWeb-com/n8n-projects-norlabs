@@ -1,0 +1,17 @@
+[
+  {
+    "date": "2026-10-28",
+    "text": "Day 38 of #100DaysOfCode. Today I learned why an AI step should return JSON, not prose: my code can check JSON, and it can't check a paragraph. One Zod schema now gives me both the TypeScript type and the runtime check.",
+    "hashtags": ["#100DaysOfCode", "#BuildWithNor", "#AgenticAI"]
+  },
+  {
+    "date": "2026-10-27",
+    "text": "Day 37. Finished an n8n workflow that sorts my inbox into recruiter, interview, course and newsletter mail, and saves reply drafts for recruiters. It never sends anything on its own: I read the draft and press Send myself.",
+    "hashtags": ["#100DaysOfCode", "#BuildInPublic", "#AIAgents"]
+  },
+  {
+    "date": "2026-10-26",
+    "text": "Day 36. Rebuilt my LinkedIn poster in TypeScript after building it in n8n. The visual version was faster to start; the code version is easier to test and to put in git.",
+    "hashtags": ["#100DaysOfCode", "#LearnInPublic", "#BuildWithNor"]
+  }
+]

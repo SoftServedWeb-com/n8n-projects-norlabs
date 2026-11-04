@@ -1,0 +1,14 @@
+# Secrets: never commit
+.env
+
+# Installed packages and build output
+node_modules
+dist
+
+# Files your app writes while running
+data/drafts.json
+data/ready.json
+
+# OS / editor
+.DS_Store
+Thumbs.db

@@ -1,0 +1,29 @@
+{
+  "name": "career-copilot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "score-posts": "tsx --env-file=.env src/post/score.ts",
+    "score-emails": "tsx --env-file=.env src/triage/score.ts",
+    "agent": "tsx --env-file=.env src/agent/cli.ts",
+    "mcp": "tsx --env-file=.env src/mcp/server.ts",
+    "dev": "tsx watch --env-file=.env src/server.ts",
+    "test": "tsx --test \"src/**/*.test.ts\"",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "openai": "7.50.0",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.6",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2"
+  }
+}

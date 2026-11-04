@@ -15,6 +15,7 @@ Every project runs on **your own laptop**, in a free, self-hosted n8n. It uses O
    3. [P2 · Job-hunt radar](<projects/p2-job-radar/REQUIREMENTS.md>) gives you a daily list of jobs that fit you, and the skills you're missing.
    4. [P4 · Interview-prep quiz bot](<projects/p4-quiz-bot/REQUIREMENTS.md>) builds your interview-prep bank one question a day.
 3. **Then pick from the project bank** by goal (below).
+4. **Moving on to code (Month 2, Weeks 5–8):** [Career Copilot](<month-2-career-copilot/README.md>) is a four-week TypeScript project that turns your LinkedIn poster and P3's email triage into an agent with tools, an MCP server and a deployed web app. It becomes your Capstone 2.
 
 You can start a project once you've reached its **Ready after** day in the program; each project's table row and header say which day that is. Do the projects in Hour 5, as homework, or on weekends. They're not graded.
 
@@ -53,6 +54,7 @@ setup/
   docker-compose.yml   n8n 2.43.7, bound to your laptop only
   .env.example         copy to .env and add bot tokens here
   files/               files your workflows read or write
+month-2-career-copilot/  ← Month 2: the TypeScript project, with a starter
 projects/
   p1-build-log/REQUIREMENTS.md
   ...
