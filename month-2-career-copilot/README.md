@@ -42,6 +42,8 @@ It reads, sorts and drafts. It **never** sends an email or publishes a post on i
 
 Start each milestone only when the previous one's **Done when** list passes.
 
+**Self-study, no code:** [How Agents Work: Loops, Tools and Trust](<self-study-agents-and-loops.md>). About 3 hours of reading and activities that walk through the agent loop by hand, plus a quiz on learn.norlabs.ai. Do it before or alongside Milestone 2, Part B, or whenever you're blocked.
+
 ---
 
 ## The rules for the whole month
